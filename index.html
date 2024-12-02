@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EduBright</title>
+    <link
+      rel="icon"
+      href="images/edubright.jpg"
+      type="image/jpg"
+      sizes="100x100"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="imk.css" />
+    <link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css" />
+  </head>
+  <body>
+    <section id="jumbotron" class="tutor-jumbotron">
+      <div id="navbar" class="tutor-navbar">
+        <div id="shadow" class="shadow" onclick="tutupNav()"></div>
+        <div class="tutor-container">
+          <button onclick="bukaNav()" class="nav-icon anitop">
+            <i class="fa fa-bars"></i>
+          </button>
+
+          <header class="tutor-header anitop">
+            <h1 class="header-title">
+              <img
+                src="images/edubright.png"
+                alt="EduBright"
+                width="50"
+                height="50"
+              />
+              <a href="" title="EduBright">EduBright</a>
+            </h1>
+          </header>
+
+          <nav class="tutor-nav anitop" id="nav">
+            <ul>
+              <li>
+                <button class="mobile" onclick="tutupNav()">Menu Utama</button>
+              </li>
+              <li>
+                <a href="#tentang" onclick="tutupNav()" title="Tentang"
+                  >Tentang</a
+                >
+              </li>
+              <li>
+                <a href="#layanan" onclick="tutupNav()" title="Layanan"
+                  >Layanan</a
+                >
+              </li>
+              <li>
+                <a href="#paket" onclick="tutupNav()" title="Paket">Paket</a>
+              </li>
+              <li>
+                <a href="#testimoni" onclick="tutupNav()" title="Testimoni"
+                  >Testimoni</a
+                >
+              </li>
+              <li>
+                <a href="#blog" onclick="tutupNav()" title="Blog">Blog</a>
+              </li>
+              <li>
+                <a href="#kontak" onclick="tutupNav()" title="Kontak">Kontak</a>
+              </li>
+              <li>
+                <a class="daftar" onclick="dBuka()" title="Daftar">Daftar</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <section id="daftar" class="tutor-daftar aniheight">
+        <div class="daftar">
+          <button
+            id="d-tutup"
+            title="Tutup Form"
+            class="d-tutup"
+            onclick="dTutup()"
+          >
+            X
+          </button>
+
+          <h2>Daftar Akun EduBright</h2>
+          <p>
+            Silahkan isi formulir dibawah ini untuk mendaftar akun EduBright.
+          </p>
+
+          <form action="" method="POST">
+            <div class="inline">
+              <div class="f-group">
+                <label>Nama Depan <span class="in">*</span></label>
+                <input type="text" placeholder="Nama depan" name="firstname" />
+              </div>
+
+              <div class="f-group">
+                <label>Nama Belakang <span class="in">*</span></label>
+                <input
+                  type="text"
+                  placeholder="Nama belakang"
+                  name="lastname"
+                />
+              </div>
+            </div>
+
+            <div class="inline">
+              <div class="f-group">
+                <label>Tanggal Lahir <span class="in">*</span></label>
+                <input type="date" name="tanggal" />
+              </div>
+
+              <div class="f-group">
+                <label>Jenis Kelamin <span class="in">*</span></label>
+                <select name="jkel">
+                  <option value="Laki-Laki">Laki-Laki</option>
+                  <option value="Perempuan">Perempuan</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="f-group">
+              <label>Alamat Email <span class="in">*</span></label>
+              <input type="email" placeholder="Alamat email" name="email" />
+            </div>
+
+            <div class="inline">
+              <div class="f-group">
+                <label>Kata Sandi <span class="in">*</span></label>
+                <input
+                  type="password"
+                  placeholder="Kata sandi"
+                  name="password"
+                />
+              </div>
+
+              <div class="f-group">
+                <label>Ulang Kata Sandi <span class="in">*</span></label>
+                <input
+                  type="password"
+                  placeholder="Ulang kata sandi"
+                  name="repassword"
+                />
+              </div>
+            </div>
+
+            <div class="f-group">
+              <label>Nomor HP <span class="in">*</span></label>
+              <input type="number" name="nomor" placeholder="Nomor HP" />
+            </div>
+
+            <button type="submit">Daftar Sekarang</button>
+          </form>
+        </div>
+      </section>
+
+      <div id="cover" class="tutor-cover">
+        <div class="tutor-container">
+          <div class="tutor-info anileft">
+            <h2>
+              Belajar bersama tingkatkan nilai mata pelajaran Anda dengan
+              bergabung di EduBright
+            </h2>
+            <p>
+              Menuju kesuksesan dengan rajin belajar dan tingkatkan nilai mata
+              pelajaran dengan bergabung di EduBright, bimbingan belajar online
+              yang memiliki tentor profesional dan biaya terjangkau
+            </p>
+            <a class="mulai" href="#tentang" title="Mulai Sekarang"
+              >Mulai Sekarang</a
+            >
+          </div>
+
+          <div class="tutor-form aniright">
+            <h2>Masuk ke EduBright</h2>
+            <p>
+              Masuk menggunakan akun EduBright yang Anda miliki dengan cara
+              mengisi formulir dibawah ini.
+            </p>
+
+            <form action="" method="POST">
+              <label for="email">Alamat Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Ketikkan alamat email"
+              />
+
+              <label for="password">Kata Sandi</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Ketikkan kata sandi"
+              />
+
+              <span></span>
+
+              <a class="lupa" href="#">Lupa kata sandi?</a>
+
+              <button type="submit">Masuk Sekarang</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tentang" class="tutor-tentang">
+      <div class="tutor-container">
+        <div class="tentang">
+          <div class="tutor-tentang-img anileft">
+            <img src="images/tugas.png" alt="Belajar" />
+          </div>
+
+          <div class="tutor-tentang-teks aniright">
+            <h2>Apa itu EduBright?</h2>
+            <p>
+              EduBright merupakan platform pembelajaran atau bimbingan belajar
+              online yang menyediakan berbagai kursus berkualitas untuk membantu
+              individu meningkatkan keterampilan dan pengetahuan. Dengan metode
+              pembelajaran yang fleksibel dan interaktif, EduBright memungkinkan
+              pengguna belajar kapan saja dan di mana saja melalui kelas
+              virtual.
+            </p>
+            <div class="flex">
+              <a class="two" href="#pengajar" title="Lihat Pengajar"
+                >Lihat Tentor</a
+              >
+              <a href="#layanan" title="Lihat Layanan">Lihat Layanan</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="alasan" class="tutor-alasan">
+      <div class="tutor-container">
+        <h2>Mengapa memilih kami?</h2>
+
+        <div class="alasan">
+          <div class="tutor-alasan-teks anileft">
+            <div class="list-alasan">
+              <span class="icon">1</span>
+              <span class="teks"
+                >Memiliki 3 Tentor yang profesional dan berkualitas</span
+              >
+            </div>
+
+            <div class="list-alasan">
+              <span class="icon">2</span>
+              <span class="teks"
+                >Fasilitas belajar yang memadai seperti kursus online, sesi
+                pembelajaran berbasis video, dan sebagainya</span
+              >
+            </div>
+
+            <div class="list-alasan">
+              <span class="icon">3</span>
+              <span class="teks"
+                >Semua mata pelajaran tersedia, dari kelas I sampai kelas
+                XII</span
+              >
+            </div>
+
+            <div class="list-alasan">
+              <span class="icon">4</span>
+              <span class="teks"
+                >Biaya murah dan sangat terjangkau bagi kalangan pelajar</span
+              >
+            </div>
+          </div>
+
+          <div class="tutor-alasan-img aniright">
+            <img src="images/sukses.png" alt="Belajar" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="layanan" class="tutor-layanan">
+      <div class="tutor-container">
+        <h2>Layanan Kami</h2>
+
+        <div class="layanan-flex">
+          <div class="layanan anileft">
+            <img src="images/bimbel-offline.svg" alt="Bimbel Offline" />
+            <h3>Materi Pembelajaran</h3>
+            <p>
+              EduBright menawarkan modul, soal latihan, video, dan materi
+              digital lainnya yang dirancang untuk meningkatkan pemahaman dan
+              keterampilan siswa
+            </p>
+          </div>
+
+          <div class="layanan anibottom">
+            <img src="images/kursus-ms.svg" alt="Kursus Microsoft" />
+            <h3>Bimbel Online</h3>
+            <p>
+              Bimbingan belajar online melalui zoom dan meet menggunakan
+              aplikasi atau website EduBright
+            </p>
+          </div>
+
+          <div class="layanan aniright">
+            <img src="images/bimbel-online.svg" alt="Bimbel Online" />
+            <h3>Platform Digital</h3>
+            <p>
+              EduBright memiliki website yang interaktif untuk mendukung proses
+              pembelajaran siswa dan media sosial untuk menjangkau lebih banyak
+              siswa
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pengajar" class="tutor-pengajar">
+      <div class="tutor-container">
+        <h2>Tentor Terbaik</h2>
+
+        <div class="pengajar-flex">
+          <div class="pengajar">
+            <div class="gambar">
+              <img src="images/arya.png" alt="Pengajar" />
+            </div>
+
+            <div class="inform aniheight">
+              <h3>Arya Galuh Saputra</h3>
+              <span>0856 4338 6983</span>
+            </div>
+          </div>
+
+          <div class="pengajar">
+            <div class="gambar">
+              <img src="images/fatur.jpeg" alt="Pengajar" />
+            </div>
+
+            <div class="inform aniheight">
+              <h3>Fatur Sakti Arrafi</h3>
+              <span>0813 8430 2468</span>
+            </div>
+          </div>
+
+          <div class="pengajar">
+            <div class="gambar">
+              <img src="images/abhirama.jpg" alt="Pengajar" />
+            </div>
+
+            <div class="inform aniheight">
+              <h3>Abhirama Rizqi Pratama</h3>
+              <span>0821 3663 1317</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="paket" class="tutor-paket">
+      <h2>Paket Kami</h2>
+
+      <div class="tutor-container">
+        <div class="paket-flex">
+          <div class="paket anileft">
+            <h3>Bimbel Online Reguler</h3>
+
+            <div class="idr">
+              <span class="type">IDR</span>
+              <p>75.000<span> / bulan</span></p>
+            </div>
+
+            <ul>
+              <li>50 video pembelajaran</li>
+              <li>Tentor yang profesional</li>
+              <li>Terdapat forum diskusi</li>
+              <li>Memiliki 2 jam masuk perhari</li>
+              <li>Mencakup mapel yang dipesan</li>
+            </ul>
+
+            <a href="#" title="Beli Sekarang">Beli Sekarang</a>
+          </div>
+
+          <div class="paket anibottom">
+            <h3>Bimbel Online Pro</h3>
+            <div class="idr">
+              <span class="type">IDR</span>
+              <p>100.000<span> / bulan</span></p>
+            </div>
+
+            <ul>
+              <li>100 video pembelajaran</li>
+              <li>Gratis e-book modul</li>
+              <li>Tentor yang profesional</li>
+              <li>Terdapat forum diskusi</li>
+              <li>Memiliki 3 jam masuk perhari</li>
+              <li>Mencakup mapel yang dipesan</li>
+            </ul>
+
+            <a href="#" title="Beli Sekarang">Beli Sekarang</a>
+          </div>
+
+          <div class="paket aniright">
+            <h3>Bimbel Online Express</h3>
+            <div class="idr">
+              <span class="type">IDR</span>
+              <p>125.000<span> / bulan</span></p>
+            </div>
+
+            <ul>
+              <li>100+ video pembelajaran</li>
+              <li>Gratis e-book modul</li>
+              <li>Tentor yang profesional</li>
+              <li>Terdapat forum diskusi</li>
+              <li>Memiliki 4 jam masuk perhari</li>
+              <li>Mencakup seluruh mapel</li>
+            </ul>
+
+            <a href="#" title="Beli Sekarang">Beli Sekarang</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimoni" class="tutor-testimoni">
+      <div class="tutor-container">
+        <h2>Testimoni Kami</h2>
+
+        <div class="testimoni-scroll">
+          <div class="testimoni-flex">
+            <div class="testimoni">
+              <img src="images/jin.jpg" />
+              <h3>Kim Seok-jin</h3>
+              <span class="btg">
+                <i class="fa fa-star"></i> <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i> <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </span>
+              <p>Luar biasa! Saya sangat berterima kasih kepada EduBright</p>
+            </div>
+
+            <div class="testimoni">
+              <img src="images/rm.jpg" />
+              <h3>RM</h3>
+              <span class="btg">
+                <i class="fa fa-star"></i> <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i> <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </span>
+              <p>
+                Mantap bimbelnya, saya sangat senang dengan pembahasannya,
+                sangat worth dan tentor sangat ramah, rekomended sekali
+              </p>
+            </div>
+
+            <div class="testimoni">
+              <img src="images/suga.jpg" />
+              <h3>Suga</h3>
+              <span class="btg">
+                <i class="fa fa-star"></i> <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i> <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </span>
+              <p>
+                Tentor disini sangat membuat saya nyaman, saya jadi sangat
+                semangat belajar, bagi saya tiada hari tanpa belajar, saya hampa
+                ketika tidak belajar
+              </p>
+            </div>
+
+            <div class="testimoni">
+              <img src="images/jimin.jpg" />
+              <h3>Jimin</h3>
+              <span class="btg">
+                <i class="fa fa-star"></i> <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i> <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </span>
+              <p>
+                Saya sangat senang dengan materi yang diberikan, semuanya hampir
+                keluar di ujian saya
+              </p>
+            </div>
+
+            <div class="testimoni">
+              <img src="images/v.jpg" />
+              <h3>V</h3>
+              <span class="btg">
+                <i class="fa fa-star"></i> <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i> <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </span>
+              <p>
+                Berkat mengikuti bimbel online ini, saya jadi lebih mudah
+                mengerjakan soal yang diberikan ketika ujian, terimakasih
+                EduBright
+              </p>
+            </div>
+
+            <div class="testimoni">
+              <img src="images/jk.jpg" />
+              <h3>Jeon Jung-kook</h3>
+              <span class="btg">
+                <i class="fa fa-star"></i> <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i> <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </span>
+              <p>
+                Pengalaman yang menyenangkan bisa belajar disini, kelasnya
+                sangat bervariasi dan bagus, terimakasih EduBright
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="blog" class="tutor-blog">
+      <div class="tutor-container">
+        <h2>Artikel Kami</h2>
+
+        <div class="blog-flex">
+          <div class="blog">
+            <a
+              href="https://www.kompasiana.com/dini12345/626bfbe83794d144cd5ce7e2/pembangunan-fisik-kelas-dan-kenyamanan-dalam-pengelolaan-ruang-kelas"
+              class="gambar"
+            >
+              <img
+                src="images/kelas.png"
+                alt="Fasilitas Ruang Kelas"
+                title="5 Syarat Ruang Kelas yang Baik untuk Belajar Siswa"
+              />
+            </a>
+            <a href="#" class="kategori" title="Pendidikan">Pendidikan</a>
+            <h2>
+              <a
+                href="#"
+                title="5 Syarat Ruang Kelas yang Baik untuk Belajar Siswa"
+              >
+                5 Syarat Bimbel Online yang Baik untuk Belajar Siswa</a
+              >
+            </h2>
+            <p class="info">
+              <span class="author">Arya Galuh Saputra</span> -
+              <span class="tanggal">1 Desember 2024</span>
+            </p>
+          </div>
+
+          <div class="blog">
+            <a href="#" class="gambar">
+              <img
+                src="images/guru.png"
+                alt="Guru Profesional"
+                title="10 Macam Ciri Guru yang Profesional dalam Mengajar"
+              />
+            </a>
+            <a href="#" class="kategori" title="Pendidikan">Pendidikan</a>
+            <h2>
+              <a
+                href="#"
+                title="10 Macam Ciri Guru yang Profesional dalam Mengajar"
+              >
+                Ciri-ciri Guru dan Tentor yang Profesional dalam Mengajar
+              </a>
+            </h2>
+            <p class="info">
+              <span class="author">Fatur Sakti Arrafi</span> -
+              <span class="tanggal">2 November 2024</span>
+            </p>
+          </div>
+
+          <div class="blog">
+            <a href="#" class="gambar">
+              <img
+                src="images/uang.png"
+                alt="Biaya Sekolah"
+                title="7 Alasan Pemerintah Mengurangi Biaya SPP Sekolah"
+              />
+            </a>
+            <a href="#" class="kategori" title="Pendidikan">Pendidikan</a>
+            <h2>
+              <a
+                href="#"
+                title="7 Alasan Pemerintah Mengurangi Biaya SPP Sekolah"
+              >
+                7 Alasan Pemerintah Mengurangi Biaya SPP Sekolah
+              </a>
+            </h2>
+            <p class="info">
+              <span class="author">Abhirama Rizqi Pratama</span> -
+              <span class="tanggal">3 Oktober 2024</span>
+            </p>
+          </div>
+        </div>
+
+        <a class="load-more" href="#" title="Tampilkan Lagi">Tampilkan Lagi</a>
+      </div>
+    </section>
+
+    <section id="kontak" class="tutor-kontak">
+      <div class="tutor-container">
+        <div class="req-demo">
+          <div class="kontak-detail">
+            <h2>Hubungi Kami</h2>
+
+            <p>
+              Berikut adalah daftar kontak EduBright yang dapat Anda hubungi
+              untuk memperoleh informasi lebih lanjut.
+            </p>
+
+            <div class="daftar-kontak">
+              <a href="https://www.instagram.com/edubright.official/"
+                ><span class="icons"><i class="fab fa-instagram"></i></span
+              ></a>
+              <span>edubright.official</span>
+            </div>
+
+            <div class="daftar-kontak">
+              <span class="icons"><i class="fa fa-envelope"></i></span>
+              <span>edubright@gmail.com</span>
+            </div>
+
+            <div class="daftar-kontak">
+              <span class="icons"><i class="fab fa-whatsapp"></i></span>
+              <span>0813 - 1234 - 56789</span>
+            </div>
+
+            <h2 class="sec">Alamat Kami</h2>
+            <p>
+              Berikut adalah alamat EduBright yang dapat Anda kunjungi untuk
+              memperoleh informasi lebih lanjut.
+            </p>
+
+            <div class="daftar-kontak">
+              <span class="icon">1</span>
+              <span
+                >Jl. Raya Mayjen Sungkono No.KM 5, Dusun 2, Blater, Kec.
+                Kalimanah, Kabupaten Purbalingga, Jawa Tengah 53371</span
+              >
+            </div>
+          </div>
+
+          <div class="form">
+            <h3>Tinggalkan Pesan</h3>
+            <p>
+              Silahkan isi seluruh formulir dibawah ini untuk mengirim sebuah
+              pesan.
+            </p>
+
+            <form method="POST">
+              <div class="inline">
+                <div class="f-group">
+                  <label>Nama Depan <span class="in">*</span></label>
+                  <input
+                    type="text"
+                    placeholder="Nama depan"
+                    name="firstname"
+                  />
+                </div>
+
+                <div class="f-group">
+                  <label>Nama Belakang <span class="in">*</span></label>
+                  <input
+                    type="text"
+                    placeholder="Nama belakang"
+                    name="lastname"
+                  />
+                </div>
+              </div>
+
+              <div class="inline">
+                <div class="f-group">
+                  <label>Nomor HP <span class="in">*</span></label>
+                  <input type="number" placeholder="Nomor HP" name="phone" />
+                </div>
+
+                <div class="f-group">
+                  <label>Alamat Email <span class="in">*</span></label>
+                  <input type="email" placeholder="Alamat email" name="email" />
+                </div>
+              </div>
+
+              <div class="f-group">
+                <label>Isi Pesan <span class="in">*</span></label>
+                <textarea
+                  name="message"
+                  rows="5"
+                  placeholder="Ketikkan pesan disini"
+                ></textarea>
+              </div>
+
+              <button type="submit" name="submit">Kirim Pesan</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer" class="tutor-footer">
+      <div class="tutor-container">
+        <div class="footer-flex">
+          <div class="footer head">
+            <h2>EduBright</h2>
+
+            <p>
+              EduBright adalah sebuah platform penyedia jasa pembelajaran online
+              atau bimbingan belajar online yang berfokus pada memberikan akses
+              pendidikan berkualitas secara fleksibel dan terjangkau
+            </p>
+
+            <div class="sosmed">
+              <a href="#" title="Official Email EduBright">
+                <i class="fab fa fa-envelope"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/edubright.official/"
+                title="Official Instagram EduBright">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer">
+            <h3>Informasi</h3>
+
+            <ul>
+              <li><a href="#" title="Bantuan">Bantuan</a></li>
+              <li><a href="#kontak" title="Hubungi Kami">Hubungi Kami</a></li>
+              <li><a href="#" title="Kode Promo">Kode Promo</a></li>
+              <li><a href="#layanan" title="Layanan">Layanan</a></li>
+              <li>
+                <a href="#pengajar" title="Lihat Pengajar"> Lihat Tentor</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer">
+            <h3>Tim Kami</h3>
+
+            <ul>
+              <li>
+                <a href="#" title="Arya Galuh Saputra">Arya Galuh Saputra</a>
+              </li>
+              <li>
+                <a href="#" title="Fatur Sakti Arrafi">Fatur Sakti Arrafi</a>
+              </li>
+              <li>
+                <a href="#" title="Abhirama Rizqi Pratama">Abhirama Rizqi Pratama</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer">
+            <h3>Tutorial</h3>
+
+            <ul>
+              <li>
+                <a href="#" title="Cara mendaftarkan akun TutorBang"
+                  >Pendaftaran</a
+                >
+              </li>
+              <li>
+                <a href="#" title="Cara melakukan pembayaran">Pembayaran</a>
+              </li>
+              <li>
+                <a href="#" title="Cara menulis testimoni">Menulis Testimoni</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="copyright">
+          <p>
+            Hak Cipta &copy;2024 <a href="/" title="EduBright">EduBright</a>
+          </p>
+
+          <p>Dibuat oleh Tim <a href="#">Kelompok 12</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <a class="totop" id="top" href="#"><i class="fa fa-chevron-up"></i></a>
+
+    <script type="text/javascript">
+      onscroll = function () {
+        animasi();
+      };
+
+      function animasi() {
+        if (
+          document.body.scrollTop > 1 ||
+          document.documentElement.scrollTop > 1
+        ) {
+          document
+            .getElementById("navbar")
+            .classList.add("tutor-navbar-fix", "anitop");
+          document
+            .getElementById("jumbotron")
+            .classList.add("tutor-jumbotron-fix");
+          document.getElementById("cover").classList.add("tutor-cover-fix");
+          document
+            .getElementById("shadow")
+            .classList.remove("blocks", "aniright");
+          document.getElementById("nav").classList.add("anitop");
+          document.getElementById("nav").classList.remove("blocks", "anileft");
+          document.getElementById("top").classList.add("blocks", "anibottom");
+        } else if (
+          document.body.scrollTop < 1 ||
+          document.documentElement.scrollTop < 1
+        ) {
+          document
+            .getElementById("navbar")
+            .classList.remove("tutor-navbar-fix", "anitop");
+          document
+            .getElementById("jumbotron")
+            .classList.remove("tutor-jumbotron-fix");
+          document.getElementById("cover").classList.remove("tutor-cover-fix");
+          document
+            .getElementById("top")
+            .classList.remove("blocks", "anibottom");
+        }
+      }
+
+      function bukaNav() {
+        document.getElementById("shadow").classList.add("blocks", "aniright");
+        document.getElementById("nav").classList.remove("anitop");
+        document.getElementById("nav").classList.add("blocks", "anileft");
+      }
+      function tutupNav() {
+        document
+          .getElementById("shadow")
+          .classList.remove("blocks", "aniright");
+        document.getElementById("nav").classList.add("anitop");
+        document.getElementById("nav").classList.remove("blocks", "anileft");
+      }
+      function dBuka() {
+        document.getElementById("daftar").classList.add("blocks", "aniheight");
+        document
+          .getElementById("shadow")
+          .classList.remove("blocks", "aniright");
+        document.getElementById("nav").classList.add("anitop");
+        document.getElementById("nav").classList.remove("blocks", "anileft");
+      }
+      function dTutup() {
+        document
+          .getElementById("daftar")
+          .classList.remove("blocks", "aniheight");
+      }
+    </script>
+  </body>
+</html>
